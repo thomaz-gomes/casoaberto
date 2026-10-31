@@ -1,0 +1,6 @@
+:root{--bg:#111;--fg:#eee;--mut:#aaa;--red:#c8102e}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px}
+h1{font-size:34px;margin:0 0 8px}h1 span{color:var(--red)}h2{margin-top:32px}
+a{color:#ff6b7d}p.mut,li.mut{color:var(--mut)}
+nav{display:flex;gap:18px;margin:16px 0 32px;flex-wrap:wrap}
