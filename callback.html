@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caso Aberto Publisher - sign in</title><link rel="stylesheet" href="estilo.css"></head><body><main>
+<h1>CASO <span>ABERTO</span> Publisher</h1>
+<p id="msg">Finishing sign-in…</p>
+<p class="mut">If nothing happens, copy this code into the tool: <code id="code"></code></p>
+<script>
+  // TikTok devolve ?code=&state= aqui; repassa para o servidor local da ferramenta (no computador do dono do canal)
+  const q = location.search;
+  document.getElementById("code").textContent = new URLSearchParams(q).get("code") || "-";
+  if (q) location.replace("http://localhost:8765/callback" + q);
+  else document.getElementById("msg").textContent = "No authorization data.";
+</script>
+</main></body></html>
